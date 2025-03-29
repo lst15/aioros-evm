@@ -1,4 +1,4 @@
-package com.aioros.aioros.interfaces;
+package com.aioros.aioros.interfaces.properties;
 
 import java.util.List;
 

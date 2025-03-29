@@ -1,6 +1,6 @@
-package com.aioros.aioros.services;
+package com.aioros.aioros.implementations.properties;
 
-import com.aioros.aioros.interfaces.IPropertyTypeString;
+import com.aioros.aioros.interfaces.properties.IPropertyTypeString;
 
 import java.util.Map;
 import java.util.WeakHashMap;
@@ -16,6 +16,10 @@ public class PropertyTypeString implements IPropertyTypeString {
         this.min = var1;
         this.max = var2;
         this.def = var3;
+    }
+
+    public static PropertyTypeString create() {
+        return createOrReuse(0, Integer.MAX_VALUE, "");
     }
 
     /**

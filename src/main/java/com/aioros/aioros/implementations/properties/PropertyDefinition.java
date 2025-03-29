@@ -1,8 +1,8 @@
-package com.aioros.aioros.services;
+package com.aioros.aioros.implementations.properties;
 
 
-import com.aioros.aioros.interfaces.IPropertyDefinition;
-import com.aioros.aioros.interfaces.IPropertyType;
+import com.aioros.aioros.interfaces.properties.IPropertyDefinition;
+import com.aioros.aioros.interfaces.properties.IPropertyType;
 import com.aioros.aioros.utils.StringUtils;
 
 public class PropertyDefinition implements IPropertyDefinition {

@@ -1,9 +1,9 @@
-package com.aioros.aioros.services;
+package com.aioros.aioros.implementations.properties;
 
-import com.aioros.aioros.interfaces.IPropertyDefinition;
-import com.aioros.aioros.interfaces.IPropertyDefinitionGroup;
-import com.aioros.aioros.interfaces.IPropertyDefinitionManager;
-import com.aioros.aioros.interfaces.IPropertyType;
+import com.aioros.aioros.interfaces.properties.IPropertyDefinition;
+import com.aioros.aioros.interfaces.properties.IPropertyDefinitionGroup;
+import com.aioros.aioros.interfaces.properties.IPropertyDefinitionManager;
+import com.aioros.aioros.interfaces.properties.IPropertyType;
 import com.aioros.aioros.utils.StringUtils;
 import org.apache.logging.log4j.util.Strings;
 import org.jetbrains.annotations.NotNull;
@@ -287,12 +287,12 @@ public class PropertyDefinitionManager implements IPropertyDefinitionManager {
         return this.addDefinition(var1, var2, var3, var4, true, (String)null);
     }
 
-    public IPropertyDefinition addInternalDefinition(String var1, IPropertyType var2) {
-        return this.addDefinition(var1, var2, (String)null, 1, true, (String)null);
+    public IPropertyDefinition addInternalDefinition(String propertyName, IPropertyType propertyType) {
+        return this.addDefinition(propertyName, propertyType, (String)null, 1, true, (String)null);
     }
 
-    public IPropertyDefinition addInternalDefinition(String var1, IPropertyType var2, String var3) {
-        return this.addDefinition(var1, var2, var3, 1, true, (String)null);
+    public IPropertyDefinition addInternalDefinition(String propertyName, IPropertyType propertyType, String description) {
+        return this.addDefinition(propertyName, propertyType, description, 1, true, (String)null);
     }
 
     /**

@@ -1,14 +1,14 @@
-package com.aioros.aioros.services;
+package com.aioros.aioros.implementations;
 
 import com.aioros.aioros.annotations.SerDisabled;
+import com.aioros.aioros.implementations.properties.PropertyDefinitionManager;
+import com.aioros.aioros.implementations.properties.PropertyTypeString;
 import com.aioros.aioros.interfaces.IClientContext;
+import com.aioros.aioros.interfaces.properties.IPropertyDefinitionManager;
 import org.apache.commons.configuration2.PropertiesConfiguration;
 import org.apache.commons.configuration2.builder.FileBasedConfigurationBuilder;
-import org.apache.commons.configuration2.builder.BuilderParameters;
-import org.apache.commons.configuration2.builder.BuilderParameters;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.apache.commons.configuration2.ex.ConfigurationException;
-
 
 import java.io.File;
 import java.io.IOException;
@@ -16,6 +16,11 @@ import java.io.IOException;
 @SerDisabled
 public class AbstractClientContext implements IClientContext {
     private PropertiesConfiguration cfg;
+    private IPropertyDefinitionManager pdm;
+
+    public void test() {
+        (this.pdm = new PropertyDefinitionManager()).addInternalDefinition(".Uuid", PropertyTypeString.create());
+    }
 
     public AbstractClientContext () {}
     /**
@@ -76,10 +81,3 @@ public class AbstractClientContext implements IClientContext {
                 .configure(parameters.properties().setFileName(path));
     }
 }
-//        (this.pm = new PropertyManager(
-//        this.pdm,
-//        new CommonsConfigurationWrapper(this.cfg)
-//        )).addListener(new IEventListener() {
-//    public void onEvent(IEvent event) {
-
-//        (this.pdm = new PropertyDefinitionManager()).addInternalDefinition(".Uuid", PropertyTypeString.create());

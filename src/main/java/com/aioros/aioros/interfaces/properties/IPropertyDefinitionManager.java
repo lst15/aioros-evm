@@ -1,7 +1,7 @@
-package com.aioros.aioros.interfaces;
+package com.aioros.aioros.interfaces.properties;
 
 public interface IPropertyDefinitionManager {
-//    IPropertyDefinition addInternalDefinition(String var1, IPropertyType var2);
+    IPropertyDefinition addInternalDefinition(String propertyName, IPropertyType propertyType);
     boolean registerChild(IPropertyDefinitionManager var1);
     String getRegion();
     String getNamespace();

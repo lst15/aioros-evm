@@ -1,4 +1,4 @@
-package com.aioros.aioros.interfaces;
+package com.aioros.aioros.interfaces.properties;
 
 public interface IPropertyDefinition {
     String getName();

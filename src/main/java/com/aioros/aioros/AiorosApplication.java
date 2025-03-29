@@ -1,13 +1,15 @@
 package com.aioros.aioros;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.aioros.aioros.implementations.AbstractClientContext;
+import org.apache.commons.configuration2.ex.ConfigurationException;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class AiorosApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AiorosApplication.class, args);
+	public static void main(String[] args) throws ConfigurationException {
+		AbstractClientContext x = new AbstractClientContext();
+		x.test();
+//		SpringApplication.run(AiorosApplication.class, args);
 	}
 
 }
